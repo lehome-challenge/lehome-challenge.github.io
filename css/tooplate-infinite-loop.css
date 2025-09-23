@@ -1077,7 +1077,7 @@ p {
 
 #infinite {
   background-color: #222;
-  background-image: url(../img/head_bg2_resized.PNG);
+  background-image: url(../img/home_fig.png);
   background-repeat: no-repeat;
   background-position: right bottom; /* 从右下角开始 */
   background-size: cover; /* 多余部分裁剪 */
