@@ -1,27 +1,53 @@
 .difficulty-row {
-  display: flex;
-  gap: 16px;           /* 项目间距 */
-  align-items: flex-start; /* 垂直对齐 */
-  flex-wrap: wrap;     /* 屏幕窄时换行 */
+    display: flex;
+    gap: 16px;
+    /* 项目间距 */
+    justify-content:flex-start;
+    align-items: center;
+    /* 垂直对齐 */
+    flex-wrap: wrap;
+    /* 屏幕窄时换行 */
 }
-.difficulty-item { margin: 0; } /* 去掉默认 p 的 margin */
+
+.difficulty-item {
+    margin: 0;
+    font-size: 20px;
+    /* 改这里：例如 16px / 18px / 20px */
+    line-height: 1.2;
+    text-align:left;
+}
+
+/* 去掉默认 p 的 margin */
 
 
 
 /* 居中 figure 整体 */
 .figure-responsive {
-   /* 控制最大宽度，防止图片过大，可按需调整或移除 */
-  width: 100%;         /* 随父容器缩放 */
-  margin: 16px auto;   /* 关键：水平居中（上下间距 16px） */
-  text-align: center;  /* 使 figcaption 居中 */
+    /* 控制最大宽度，防止图片过大，可按需调整或移除 */
+    width: 100%;
+    /* 随父容器缩放 */
+    margin: 16px auto;
+    /* 关键：水平居中（上下间距 16px） */
+    text-align: center;
+    /* 使 figcaption 居中 */
 }
 
 /* 图片自适应，不变形 */
 /* 让图片更大并居中 */
 .responsive-img {
-  display: block;
-  margin: 12px auto;   /* 水平居中，去掉则靠左 */
-  width: 150%;          /* 或者 width: 600px; */
-  max-width: 100%;     /* 防止超出容器 */
-  height: auto;        /* 保持纵横比 */
+    display: block;
+    margin: 12px auto;
+    /* 水平居中，去掉则靠左 */
+    width: 150%;
+    /* 或者 width: 600px; */
+    max-width: 100%;
+    /* 防止超出容器 */
+    height: auto;
+    /* 保持纵横比 */
 }
+
+.spacer {
+    height: 24px;
+}
+
+/* 高度可调 */
