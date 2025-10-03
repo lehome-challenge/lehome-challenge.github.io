@@ -49,8 +49,3 @@
 .spacer {
     height: 24px;
 }
-
-/* 高度可调 */
-.task-slider { overflow: hidden; }
-.task-wrapper { display:flex; transition: transform 0.4s ease; width:100%; }
-.task-item { flex: 0 0 100%; box-sizing: border-box; }

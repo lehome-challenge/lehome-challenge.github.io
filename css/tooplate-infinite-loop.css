@@ -18,6 +18,7 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
 a {
   transition: all 0.3s ease;
   color: #38B;
@@ -111,9 +112,12 @@ blockquote {
 }
 
 .tm-nav-link {
-  color: black !important;  /* 使用黑色字体 */
-  font-size: 18px;           /* 调整字体大小 */
-  font-weight: bold;         /* 增加字体粗细，保持视觉效果 */
+  color: black !important;
+  /* 使用黑色字体 */
+  font-size: 18px;
+  /* 调整字体大小 */
+  font-weight: bold;
+  /* 增加字体粗细，保持视觉效果 */
 }
 
 
@@ -194,30 +198,42 @@ blockquote {
   height: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: center; /* 垂直居中对齐 */
-  align-items: center; /* 水平居中对齐 */
+  justify-content: center;
+  /* 垂直居中对齐 */
+  align-items: center;
+  /* 水平居中对齐 */
 }
 
 .tm-hero-text-container-inner {
-  margin-top: 0; /* 调整这个值来控制垂直位置 */
-  padding: 20px; /* 可以根据需要增加内边距 */
+  margin-top: 0;
+  /* 调整这个值来控制垂直位置 */
+  padding: 20px;
+  /* 可以根据需要增加内边距 */
 }
 
 .tm-hero-title {
-  font-size: 3.5rem; /* 标题的字体大小 */
-  font-size: 5rem; /* 标题的字体大小 */
-  color: black; /* 标题的颜色 */
-  text-shadow: 2px 2px 2px #333; /* 文本阴影效果 */
-  margin: 0; /* 移除默认外边距 */
-  position: relative; /* 允许进一步调整位置 */
-  top: -80px; /* 向上移动100px，控制标题的垂直位置 */
+  font-size: 3.5rem;
+  /* 标题的字体大小 */
+  font-size: 5rem;
+  /* 标题的字体大小 */
+  color: black;
+  /* 标题的颜色 */
+  text-shadow: 2px 2px 2px #333;
+  /* 文本阴影效果 */
+  margin: 0;
+  /* 移除默认外边距 */
+  position: relative;
+  /* 允许进一步调整位置 */
+  top: -80px;
+  /* 向上移动100px，控制标题的垂直位置 */
   /*right: 300px; !* 向右移动50px，正值为向右，负值为向左 *!*/
 }
 
 
 @media (max-width: 768px) {
   .tm-hero-title {
-    font-size: 3rem; /* 在小屏幕上调整字体大小 */
+    font-size: 3rem;
+    /* 在小屏幕上调整字体大小 */
   }
 }
 
@@ -357,7 +373,7 @@ blockquote {
 }
 
 .grid figure figcaption,
-.grid figure figcaption > a {
+.grid figure figcaption>a {
   position: absolute;
   top: 0;
   left: 0;
@@ -367,7 +383,7 @@ blockquote {
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.grid figure figcaption > a {
+.grid figure figcaption>a {
   z-index: 1000;
   text-indent: 200%;
   white-space: nowrap;
@@ -525,7 +541,8 @@ figure.effect-honey:hover h2 i {
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
 :-ms-input-placeholder {
@@ -680,23 +697,27 @@ p {
   padding: 40px 0;
   font-family: 'Arial', sans-serif;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .tm-section-title {
   text-align: center;
   color: #2c3e50;
   font-size: 2.5em;
   margin-bottom: 30px;
 }
+
 .leaderboard-container {
   overflow-x: auto;
   white-space: nowrap;
   padding-bottom: 15px;
   -webkit-overflow-scrolling: touch;
 }
+
 .leaderboard-table {
   display: inline-block;
   margin-right: 20px;
@@ -706,65 +727,86 @@ p {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .leaderboard-table:last-child {
   margin-right: 0;
 }
-.leaderboard-table th, .leaderboard-table td {
+
+.leaderboard-table th,
+.leaderboard-table td {
   padding: 12px 15px;
   text-align: center;
 }
+
 .leaderboard-table thead {
   background-color: #040505;
   color: #ffffff;
 }
+
 .leaderboard-table th {
   font-weight: bold;
 }
+
 .leaderboard-table tbody tr:nth-child(even) {
   background-color: #f8f9fa;
 }
+
 .leaderboard-table tbody tr:hover {
   background-color: #e8f4f8;
 }
+
 /*leaderboard*/
 
 /*news*/
 .news-item-highlight {
   background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 12px;
   border-left: 6px solid #ff6b6b;
   margin-bottom: 20px;
 }
+
 .news-item-highlight:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
+
 .news-item-highlight .news-date {
   font-weight: bold;
   color: #ff6b6b;
   font-size: 1.2em;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 .news-item-highlight .news-content {
   margin-top: 15px;
   color: #333;
   font-weight: 500;
 }
+
 .news-item-highlight .news-content a {
   color: #2c3e50;
   text-decoration: underline;
   font-weight: bold;
 }
+
 .news-item-highlight .rocket {
   font-size: 1.5em;
   margin-left: 5px;
   animation: rocketMove 2s infinite;
 }
+
 @keyframes rocketMove {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .news-item {
@@ -774,7 +816,7 @@ p {
   background-color: #f8f9fa;
   border-radius: 8px;
   padding: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .news-date {
@@ -808,7 +850,8 @@ p {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  justify-content: center; /* 使内容居中 */
+  justify-content: center;
+  /* 使内容居中 */
 }
 
 .news-circle {
@@ -827,8 +870,15 @@ p {
 }
 
 @keyframes rocketFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 /*news*/
@@ -840,20 +890,25 @@ p {
   font-size: 1.5em;
   color: #000;
   font-weight: bold;
-  text-align: left; /* 居左对齐 */
-  margin-bottom: 20px; /* 调整小标题与内容之间的间距 */
+  text-align: left;
+  /* 居左对齐 */
+  margin-bottom: 20px;
+  /* 调整小标题与内容之间的间距 */
   /*padding-left: 20px; !* 调整左边距，可根据需要调整数值 *!*/
 }
 
 .organizer {
   text-align: center;
-  margin-bottom: 30px; /* 控制每个卡片之间的间距 */
+  margin-bottom: 30px;
+  /* 控制每个卡片之间的间距 */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .organizer:hover {
-  transform: scale(1.05); /* 放大效果 */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* 发亮效果 */
+  transform: scale(1.05);
+  /* 放大效果 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* 发亮效果 */
 }
 
 
@@ -861,15 +916,18 @@ p {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  margin-bottom: 15px; /* 调整图片与名字之间的距离 */
-  border-radius: 50%; /* 保持圆形图片 */
+  margin-bottom: 15px;
+  /* 调整图片与名字之间的距离 */
+  border-radius: 50%;
+  /* 保持圆形图片 */
 }
 
 .organizer p {
   font-size: 1em;
   color: #333;
   margin: 0;
-  margin-bottom: 5px; /* 调整名字与学校之间的间距 */
+  margin-bottom: 5px;
+  /* 调整名字与学校之间的间距 */
 }
 
 /*organizer*/
@@ -878,11 +936,13 @@ p {
 #Challenges {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: #f4f4f4; /* 给这个部分一个淡背景色 */
+  background-color: #f4f4f4;
+  /* 给这个部分一个淡背景色 */
 }
 
 .tm-section-title {
-  font-size: 3em; /* 调整字体大小 */
+  font-size: 3em;
+  /* 调整字体大小 */
   text-align: left;
   color: #333;
   margin-bottom: 40px;
@@ -892,7 +952,8 @@ p {
   font-size: 1.2em;
   margin-bottom: 30px;
   color: #666;
-  text-align: justify; /* 使文本两端对齐 */
+  text-align: justify;
+  /* 使文本两端对齐 */
 
 }
 
@@ -915,7 +976,7 @@ p {
   color: #555;
 }
 
-{
+  {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #f9f9f9;
@@ -956,25 +1017,37 @@ p {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 30vh; /* 设置为视窗高度 */
+  height: 30vh;
+  /* 设置为视窗高度 */
   display: flex;
-  justify-content: center; /* 图片水平居中 */
-  align-items: center; /* 图片垂直居中 */
-  background-color: #f4f4f4; /* 你可以根据需要选择背景颜色 */
+  justify-content: center;
+  /* 图片水平居中 */
+  align-items: center;
+  /* 图片垂直居中 */
+  background-color: #f4f4f4;
+  /* 你可以根据需要选择背景颜色 */
 }
 
 .large-image {
-  max-width: 100%; /* 确保图片不会超出屏幕宽度 */
-  height: auto; /* 保持图片比例 */
-  object-fit: cover; /* 如果图片有多余部分，确保它填充整个容器 */
+  max-width: 100%;
+  /* 确保图片不会超出屏幕宽度 */
+  height: auto;
+  /* 保持图片比例 */
+  object-fit: cover;
+  /* 如果图片有多余部分，确保它填充整个容器 */
 }
 
 .contact-logo {
-  width: 150px; /* 图片宽度 */
-  height: 150px; /* 图片高度 */
-  border-radius: 50%; /* 将图片裁剪成圆形 */
-  object-fit: cover; /* 确保图片按比例填充 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加轻微阴影效果 */
+  width: 150px;
+  /* 图片宽度 */
+  height: 150px;
+  /* 图片高度 */
+  border-radius: 50%;
+  /* 将图片裁剪成圆形 */
+  object-fit: cover;
+  /* 确保图片按比例填充 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* 添加轻微阴影效果 */
 }
 
 
@@ -984,36 +1057,69 @@ p {
   padding: 0 15px;
 }
 
+/* 容器（外层） */
 .task-slider {
   position: relative;
   overflow: hidden;
   margin-top: 2rem;
+  /* 确保没有内边距影响可视宽度 */
+  padding: 0;
 }
+
+/* 滑动包装器：使用 flex，平移时平滑 */
 .task-wrapper {
   display: flex;
   transition: transform 0.3s ease;
+  will-change: transform;
+  /* 性能提示 */
+  /* 防止因为 gap 导致百分比错位（如果你之前用过 gap，建议删除或设为0） */
+  gap: 0;
+  box-sizing: border-box;
 }
+
+/* 每个 item 完全占据一页的宽度 —— 关键 */
 .task-item {
   flex: 0 0 100%;
+  /* 强制每项宽度为 slider 可视宽度 */
+  box-sizing: border-box;
+  /* 包含 padding/border 在宽度内，避免超出 */
   padding: 20px;
+  /* 可选内边距 */
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* 下面两行确保内部大元素不会撑开 item 宽度 */
+  max-width: 100%;
+  overflow: hidden;
 }
+
+/* 针对内部 iframe / img 等内容，保证不会超出父元素 */
+.task-item img,
+.task-item iframe,
+.task-item .embedded {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+
 .task-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #000;
 }
+
 .task-desc {
   font-size: 1rem;
   line-height: 1.4;
 }
+
 .slider-controls {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
 }
+
 .slider-btn {
   background-color: #000;
   color: #fff;
@@ -1024,9 +1130,11 @@ p {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .slider-btn:hover {
   background-color: #000;
 }
+
 .slider-btn:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
@@ -1034,43 +1142,53 @@ p {
 
 .task-gifs {
   display: flex;
-  justify-content: center; /* 居中GIF */
-  gap: 20px; /* 在GIF之间添加20像素的间距 */
+  justify-content: center;
+  /* 居中GIF */
+  gap: 20px;
+  /* 在GIF之间添加20像素的间距 */
   margin-bottom: 1rem;
 }
 
 .task-gif {
-  width: 33%; /* Slightly less than 50% to account for gap */
+  width: 33%;
+  /* Slightly less than 50% to account for gap */
   max-width: 400px;
   height: auto;
   border-radius: 4px;
 }
+
 .challenge-format-section {
   background-color: #f5f7fa;
   padding: 40px 0;
   font-family: 'Arial', sans-serif;
 }
+
 .tm-text-primary {
   color: #2c3e50;
   font-size: 2.5em;
   text-align: center;
   margin-bottom: 30px;
 }
+
 .challenge-content {
   background-color: white;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .challenge-content h3 {
   color: #000;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.challenge-content p, .challenge-content ul {
+
+.challenge-content p,
+.challenge-content ul {
   color: #34495e;
   line-height: 1.6;
 }
+
 .challenge-content ul {
   padding-left: 20px;
 }
@@ -1079,8 +1197,10 @@ p {
   background-color: #222;
   background-image: url(../img/home_fig.png);
   background-repeat: no-repeat;
-  background-position: right bottom; /* 从右下角开始 */
-  background-size: cover; /* 多余部分裁剪 */
+  background-position: right bottom;
+  /* 从右下角开始 */
+  background-size: cover;
+  /* 多余部分裁剪 */
   height: 100vh;
   min-height: 375px;
   position: relative;
@@ -1092,6 +1212,7 @@ p {
   justify-content: space-around;
   padding: 20px;
 }
+
 .triple-gif-section {
   width: 50%;
   height: 400px;
@@ -1099,6 +1220,7 @@ p {
   display: flex;
   flex-wrap: wrap;
 }
+
 .triple-gif-item {
   width: 50%;
   height: 50%;
@@ -1108,6 +1230,7 @@ p {
   align-items: center;
   font-size: 24px;
 }
+
 .triple-gif-item-bottom {
   width: 80%;
   height: 50%;
