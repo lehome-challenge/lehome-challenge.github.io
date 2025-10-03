@@ -48,10 +48,9 @@
                                 <a class="nav-link tm-nav-link"
                                     href="#leaderboard">Leaderboard</a>
                             </li> -->
-                        <!-- <li class="nav-item">
-                                <a class="nav-link tm-nav-link"
-                                    href="#timeline">Timeline</a>
-                            </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link tm-nav-link" href="#timeline">Timeline</a>
+                        </li>
                         <!-- <li class="nav-item">
                                 <a class="nav-link tm-nav-link"
                                     href="#Award">Award</a>
@@ -117,42 +116,20 @@
                         <h2 class="tm-text-primary mb-4 tm-section-title">Overview</h2>
 
                         <p class="mb-4 tm-intro-text">
-                            Garment manipulation is a fundamental yet highly
-                            challenging problem in robotic manipulation and
-                            embodied AI, involving complex, deformable
-                            objects and contact-rich interactions. The
-                            Garment Manipulation Challenge aims to establish
-                            a standardized benchmarking platform for
-                            evaluating robotic systems' ability to
-                            understand and manipulate garments effectively,
-                            fostering innovation in policy learning, tactile
-                            reasoning, and visual perception for deformable
-                            object handling.
+                            Garment manipulation is a fundamental yet highly challenging problem in robotic manipulation
+                            area, involving complex, deformable objects and contact-rich interactions. The Lehome
+                            Challenge aims to establish a standardized benchmarking platform for evaluating robotic
+                            ability to understand and manipulate garments effectively, fostering innovation in policy
+                            learning, model reasoning, visual perception and representation for deformable object
+                            handling.
                         </p>
-                        <p class="mb-4 tm-intro-text">
-                            Building on state-of-the-art simulation
-                            platforms such as LeRobot and DexGarmentLab, we
-                            provide a high-fidelity simulation environment
-                            and demonstration datasets to support diverse
-                            approaches, including imitation learning,
-                            affordance-based methods, and vision-language
-                            reasoning. The challenge focuses exclusively on
-                            garment folding tasks, primarily on tops
-                            (long-sleeve, short-sleeve, sleeveless, with or
-                            without hoods), with potential extensions to
-                            pants.
-                        </p>
-                        <h3 class="tm-text-primary mb-3">The LeHome
-                            Challenge 2026 features:</h3>
-                        <ul class="mb-4 tm-intro-text">
-                            <li>Simulation Benchmark with High-Fidelity
-                                Technique</li>
-                            <li>Real-World Evaluation with Low-Cost Robot
-                                Platform</li>
-                            <li>Household Scene Tasks Involving Diverse
-                                Garments</li>
+                        <h3 class="tm-text-primary mb-3">
+                            Challenge Features</h3>
+                        <li><strong>Garment Manipulation with Sufficient Diversity.</strong></li>
+                        <li><strong>Evaluation in both Simulation and Real-World.</strong></li>
+                        <li><strong>Low-Cost Robotic Manipulation Platform.</strong></li>
+     
 
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -163,39 +140,270 @@
             <h2 class="tm-text-primary mb-4 tm-section-title">Challenge
                 Format</h2>
             <div class="mb-4 tm-intro-text">
-                <p>The competition consists of two stages:</p>
-
-                <h3>Stage 1: Simulation Competition</h3>
-                <ul>
-                    <li>Participants develop and evaluate their policies in
-                        our simulation environment, where success rates over
-                        multiple trials determine rankings. The Top K teams
-                        will receive preliminary rewards and invitations to
-                        the next stage.</li>
+                <p>Our Competition comprises two components: the Simulation Challenge and the Real-World Challenge. The
+                    Simulation Challenge will take place from late
+                    2025 to early
+                    2026. The top 8 ranked participants in this phase will be
+                    invited to compete in the Real-World Challenge, which will
+                    be held on-site at ICRA. In the Simulation Challenge, we will open-source the
+                    benchmark environment in advance to allow participants to
+                    test tasks locally. Participants are required to submit their
+                    code and models via a cloud platform, where final testing and
+                    score announcement will also be conducted. For the Real-
+                    World Challenge, a dedicated venue will be set up at the
+                    ICRA site for on-site model testing.</p>
+                <h3><b>Task Requirement</b></h3>
+                <ul>The task for this Challenge is garment folding. Participants are required to leverage models to
+                    perceive the current state of the garment, perform flattening
+                    or folding operations, and ultimately fold the garment into
+                    a proper form. We encourage the use of any approach for
+                    robotic operation, including but not limited to end-to-end
+                    models, affordance-based methods, and sim2real techniques.
                 </ul>
-
-                <h3>Stage 2: Real-World Competition</h3>
+                <h3><b>Task Environment Setting</b></h3>
                 <ul>
-                    <li>Selected teams will deploy their solutions on
-                        physical robotic systems using LeRobot, testing
-                        Sim2Real transfer capabilities. Additional
-                        real-world demonstration data will be provided if
-                        needed, and teams using Sim2Real policies will
-                        receive bonus scoring.</li>
+                    <li>Platform: HuggingFace LeRobot SO-ARM 101 with RealSense L515; white tabletop background.</li>
+                    <li>Configuration: participants may customize arm and camera positions.</li>
+                    <li>Simulation Challenge: additional cameras/hardware can be added directly in simulation.</li>
+                    <li>Real-World Challenge: participants must supply any extra hardware themselves.</li>
                 </ul>
-                <p>Top performers will be recognized with awards,
-                    certificates, and opportunities to present their methods
-                    during an associated workshop session at ICRA 2026. By
-                    focusing on deformable object manipulation, this
-                    challenge seeks to bring together researchers from
-                    tactile sensing, computer vision, and robotics policy
-                    learning, driving advances in robotic garment handling
-                    and broader embodied AI techniques.</p>
+                <h3><b>Task Difficulty Levels</b></h3>
+                <ul>
+                    To fully test the capabilities of the models, we have designed three distinct initial states
+                    for various garments, corresponding to three difficulty levels
+                    (i.e., easy, middle, hard).
+                    <li><strong>Easy:</strong> The target garment starts in a fully flat initial
+                        state, with all its key points fully exposed.</li>
+                    <li><strong>Middle:</strong> The garment’s initial state features slight fold
+                        ing, where some (but not all) key points are hidden.</li>
+                    <li><strong>Hard:</strong> The garment begins in a heavily folded initial state, making it
+                        potentially difficult to identify the garment’s shape.</li>
+                </ul>
+                <h3><b>Task Garment Category and Style</b></h3>
+                <ul>
+                    <li>Garments are children’s size due to SO-ARM 101 reach, but are structurally comparable to adult
+                        garments for manipulation tasks.</li>
+                    <li>Two categories: tops (3 styles: long-sleeved, short-sleeved, sleeveless) and pants (2 styles:
+                        long pants, shorts).</li>
+                    <li>Dataset selection: for each style, 3 garments in the training set and 1 unseen garment added to
+                        the test set → total 15 training and 20 testing garments.</li>
+                    <li>Real-to-sim alignment: real garments will be 3D-scanned and converted into simulation assets.
+                    </li>
+                </ul>
             </div>
         </div>
 
     </section>
 
+    <section id="Tracks" class="tm-section-pad-top">
+        <div class="container">
+            <h2 class="tm-text-primary mb-4 tm-section-title">Competition Assessment</h2>
+            <h3>
+            </h3>
+            <div class="task-slider">
+                <div class="task-wrapper">
+                    <div class="task-item">
+                        <h4 class="task-title">Garment Category</h4>
+                        <p class="mb-4 tm-intro-text">The test set includes 15 seen objects and 5
+                            unseen objects. Each garment has three initial states, forming
+                            a total of 60 experiments. The model of each participating
+                            team will be tested sequentially across all 60 experiments, with success rate serving as the
+                            key metric for qualification.
+                            The top 8 teams ranked by success rate will qualify for the
+                            Real-World Challenge.
+                        </p>
+                        <div class="task-gifs">
+                            <iframe
+                                src="https://docs.google.com/spreadsheets/d/1QdSMgc803d4aN_N2XPgVm9N3GBtzVSnkCGCvJoM0uJg/edit?usp=sharing"
+                                width="100%" height="600" frameborder="0" scrolling="no">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="task-item">
+                        <h4 class="task-title">Scores on Tasks with Different Settings</h4>
+                        <p class="mb-4 tm-intro-text">In the real-robot testing competition, each
+                            team is allocated 15 minutes for garment folding. Teams
+                            may freely select the garments and initial states they wish to
+                            operate on, with different garment-initial state combinations
+                            assigned distinct score.</p>
+                        <div class="task-gifs">
+                            <iframe
+                                src="https://docs.google.com/spreadsheets/d/11xjF_av3U7HqCxtLkwy7vl8lhYJcePOvv9kA4w5vzWY/edit?usp=sharing"
+                                width="100%" height="600" frameborder="0" scrolling="no">
+                            </iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button id="prevBtn" class="slider-btn" disabled>Previous</button>
+                <button id="nextBtn" class="slider-btn">Next</button>
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        .leaderboard-nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .leaderboard-nav-btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            background: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .leaderboard-nav-btn.active {
+            border-bottom: 2px solid #0b0b0b;
+            font-weight: bold;
+        }
+
+        .leaderboard-nav-btn:hover {
+            border-bottom: 2px solid #0b0b0b;
+        }
+    </style>
+
+    <script>
+        function showLeaderboard(stage) {
+            // Hide all leaderboards
+            document.getElementById('stage1-leaderboard').style.display = 'none';
+            document.getElementById('stage2-leaderboard').style.display = 'none';
+
+            // Show selected leaderboard
+            document.getElementById(stage + '-leaderboard').style.display = 'block';
+
+            // Update button states
+            const buttons = document.querySelectorAll('.leaderboard-nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+
+
+    <section id="timeline" class="timeline-section">
+        <style>
+            .timeline-section {
+                background-color: #f8f9fa;
+                padding: 50px 0;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+
+            .tm-section-title {
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+
+            .timeline {
+                display: flex;
+                overflow-x: auto;
+                padding: 20px 0 40px;
+                position: relative;
+            }
+
+            .timeline::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: #0b0b0b;
+                z-index: 1;
+            }
+
+            .timeline-item {
+                flex: 0 0 auto;
+                width: 200px;
+                margin: 0 20px;
+                background: white;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                position: relative;
+                z-index: 2;
+            }
+
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: #0b0b0b;
+                border-radius: 50%;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .timeline-content h3 {
+                margin: 0 0 10px;
+                color: #0b0b0b;
+                font-size: 1.2rem;
+            }
+
+            .timeline-content p {
+                margin: 0;
+                color: #666;
+                font-size: 0.9rem;
+            }
+        </style>
+        <div class="container">
+            <h1 class="tm-text-primary mb-4 tm-section-title">Timeline</h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Code Release</h3>
+                        <p>Nov 15, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Registration</h3>
+                        <p>Dec 1, 2025 to</p>
+                        <p>Dec 30, 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Simulation Compeition</h3>
+                        <p>Jan 1, 2026 to</p>
+                        <p>Apr 5, 2026</p>
+
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Real-World Competition</h3>
+                        <p>Apr 6, 2026 to</p>
+                        <p>Jun 3, 2026</p>
+
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Closing Ceremony</h3>
+                        <p>Jun 4, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="Organizers" class="tm-section-pad-top">
         <div class="container">
             <h2 class="tm-text-primary mb-4 tm-section-title">Organizers</h2>
@@ -236,6 +444,13 @@
                         style="cursor: pointer;">
                         <img src="img/yushi.jpg" class="img-fluid rounded-circle" alt="Organizer 1">
                         <p class="mt-2">Yushi Yang<br><small>University of CAS</small></p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4">
+                    <div class="organizer" onclick="window.location.href='https://github.com/JadeYyang';"
+                        style="cursor: pointer;">
+                        <img src="img/jingkai.jpg" class="img-fluid rounded-circle" alt="Organizer 1">
+                        <p class="mt-2">Jingkai Xu<br><small>University of CAS</small></p>
                     </div>
                 </div>
             </div>
