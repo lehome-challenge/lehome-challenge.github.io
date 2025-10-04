@@ -125,11 +125,13 @@
                         </p>
                         <h3 class="tm-text-primary mb-3">
                             Challenge Features</h3>
-                        <li>Garment Manipulation with Sufficient Diversity.</li>
-                        <li>Evaluation in both Simulation and Real-World.</li>
-                        <li>Low-Cost Robotic Manipulation Platform.</li>
-
-
+                        <div class="mb-4 tm-intro-text">
+                            <ul>
+                                <li>Garment Manipulation with Sufficient Diversity.</li>
+                                <li>Evaluation in both Simulation and Real-World.</li>
+                                <li>Low-Cost Robotic Manipulation Platform.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -140,7 +142,7 @@
             <h2 class="tm-text-primary mb-4 tm-section-title">Challenge
                 Format</h2>
             <div class="mb-4 tm-intro-text">
-                <p>Our Competition comprises two components: the Simulation Challenge and the Real-World Challenge. The
+               <p class="mb-4 tm-intro-text">Our Competition comprises two components: the Simulation Challenge and the Real-World Challenge. The
                     Simulation Challenge will take place from late 2025 to early 2026. The top 8 ranked participants in
                     this phase will be
                     invited to compete in the Real-World Challenge.</p>
@@ -179,23 +181,23 @@
             <div class="task-slider">
                 <div class="task-wrapper">
                     <div class="task-item">
-                        <h4 class="task-title">Task Environment Setting</h4>
+                        <h4 class="task-title"><strong>Task Environment Setting</strong></h4>
                         <p class="mb-4 tm-intro-text">
                             Equipment including robotic arms, cameras, test platforms, and inference computing power
                             will be prepared by the organizer, and model training computing power needs to be
                             self-provided. The environmental setting diagram is shown in Figure 1.</p>
-                        <div class="difficulty-row">
-                            <div class="difficulty-item"><strong>Hardware Platform: </strong> Bi-Arm LeRobot designed by
-                                HuggingFace with inhand camera;
-                                Tripod-Mounted RealSense L515; White Tabletop Background.</div>
-                            <div class="difficulty-item"><strong>Task Setting: </strong> Participants cans customize arm
-                                and camera positions. A reasonable set of default solutions will also be provided by the
-                                official.</div>
-                            <div class="difficulty-item"><strong>Simulation Challenge:</strong> Additional
-                                cameras can be added directly in simulation.</div>
-                            <div class="difficulty-item"><strong>Real-World Challenge:</strong> Participants must supply
-                                any extra hardware themselves.</div>
-                        </div>
+                        <p class="mb-4 tm-intro-text">
+                            <strong>Hardware Platform: </strong> Bi-Arm LeRobot designed by
+                            HuggingFace with inhand camera;
+                            Tripod-Mounted RealSense L515; White Tabletop Background.<br>
+                            <strong>Task Setting: </strong> Participants cans customize arm
+                            and camera positions. A reasonable set of default solutions will also be provided by the
+                            official.<br>
+                            <strong>Simulation Challenge:</strong> Additional
+                            cameras can be added directly in simulation.<br>
+                            <strong>Real-World Challenge:</strong> Participants must supply
+                            any extra hardware themselves.
+                        </p>
                         <div class="spacer" aria-hidden="true"></div>
 
 
@@ -208,22 +210,22 @@
                     </div>
 
                     <div class="task-item">
-                        <h4 class="task-title">Garment Category and Style</h4>
+                        <h4 class="task-title"><strong>Garment Category and Style</strong></h4>
                         <p class="mb-4 tm-intro-text">
                             Garments are children's size due to limited reach range, but are structurally comparable to
                             adult garments for manipulation tasks. Some examples of fabrics are shown in Figure 2.</p>
-                        <div class="difficulty-row">
-                            <div class="difficulty-item"><strong>Categories:</strong> Tops (3 styles:
-                                long-sleeved,
-                                short-sleeved, sleeveless) and Pants (2 styles:
-                                long pants, shorts).</div>
-                            <div class="difficulty-item"><strong>Dataset selection:</strong> For each style, 3
-                                garments
-                                in the training set and 1 unseen garment added to
-                                the test set → Total 15 training and 20 testing garments.</div>
-                            <div class="difficulty-item"><strong>Real-to-sim alignment:</strong> Real garments will
-                                be 3D-scanned and converted into simulation assets.</div>
-                        </div>
+                        <p class="mb-4 tm-intro-text">
+                            <strong>Categories:</strong> Tops (3 styles:
+                            long-sleeved,
+                            short-sleeved, sleeveless) and Pants (2 styles:
+                            long pants, shorts).<br>
+                            <strong>Dataset selection:</strong> For each style, 3
+                            garments
+                            in the training set and 1 unseen garment added to
+                            the test set → Total 15 training and 20 testing garments.<br>
+                            <strong>Real-to-sim alignment:</strong> Real garments will
+                            be 3D-scanned and converted into simulation assets.
+                        </p>
                         <div class="spacer" aria-hidden="true"></div>
                         <div class="spacer" aria-hidden="true"></div>
                         <div class="spacer" aria-hidden="true"></div>
@@ -238,26 +240,26 @@
                         </div>
                     </div>
                     <div class="task-item">
-                        <h4 class="task-title">Task Difficulty Levels</h4>
+                        <h4 class="task-title"><strong>Task Difficulty Levels</strong></h4>
                         <p class="mb-4 tm-intro-text">
                             To fully test the capabilities of the models, we have designed three distinct initial
                             states
                             for various garments, corresponding to three difficulty levels
                             (i.e., easy, middle, hard).</p>
-                        <div class="difficulty-row">
-                            <div class="difficulty-item"><strong>Easy:</strong> The target garment starts in a fully
-                                flat
-                                initial
-                                state, with all its key points fully exposed.</div>
-                            <div class="difficulty-item"><strong>Middle:</strong> The garment's initial state
-                                features
-                                slight fold
-                                ing, where some (but not all) key points are hidden.</div>
-                            <div class="difficulty-item"><strong>Hard:</strong> The garment begins in a heavily
-                                folded
-                                initial state, making it
-                                potentially difficult to identify the garment's shape.</div>
-                        </div>
+                        <p class="mb-4 tm-intro-text">
+                            <strong>Easy:</strong> The target garment starts in a fully
+                            flat
+                            initial
+                            state, with all its key points fully exposed.<br>
+                            <strong>Middle:</strong> The garment's initial state
+                            features
+                            slight fold
+                            ing, where some (but not all) key points are hidden.<br>
+                            <strong>Hard:</strong> The garment begins in a heavily
+                            folded
+                            initial state, making it
+                            potentially difficult to identify the garment's shape.
+                        </p>
                         <div class="spacer" aria-hidden="true"></div>
                         <div class="spacer" aria-hidden="true"></div>
                         <div class="spacer" aria-hidden="true"></div>
@@ -286,7 +288,7 @@
                         </p>
                         <div class="spacer" aria-hidden="true"></div>
                         <div class="spacer" aria-hidden="true"></div>
-                    
+
 
                         <div class="figure-wrapper">
                             <figure class="figure-responsive">
@@ -308,7 +310,7 @@
                             be ranked higher; if the number of failures is also equal, the
                             teams will share the same rank.</p>
                         <div class="spacer" aria-hidden="true"></div>
-                        
+
                         <div class="figure-wrapper">
                             <figure class="figure-responsive">
                                 <img src="img/taskscore.png" alt="..." class="responsive-table" loading="lazy">
