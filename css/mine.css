@@ -38,14 +38,26 @@
     display: block;
     margin: 12px auto;
     /* 水平居中，去掉则靠左 */
-    width: 150%;
+    width: 100%;
     /* 或者 width: 600px; */
     max-width: 100%;
     /* 防止超出容器 */
     height: auto;
     /* 保持纵横比 */
-}
 
+}
+.responsive-table {
+    display: block;
+    margin: 12px auto;
+    /* 水平居中，去掉则靠左 */
+    width: 500px;
+    /* 或者 width: 600px; */
+    max-width: 100%;
+    /* 防止超出容器 */
+    height: auto;
+    /* 保持纵横比 */
+
+}
 .spacer {
     height: 24px;
 }
