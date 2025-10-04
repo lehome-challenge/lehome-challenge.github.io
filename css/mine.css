@@ -50,7 +50,7 @@
     display: block;
     margin: 12px auto;
     /* 水平居中，去掉则靠左 */
-    width: 500px;
+    width: 650px;
     /* 或者 width: 600px; */
     max-width: 100%;
     /* 防止超出容器 */
