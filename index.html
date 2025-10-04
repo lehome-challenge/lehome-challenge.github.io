@@ -141,16 +141,55 @@
                 Format</h2>
             <div class="mb-4 tm-intro-text">
                 <p>Our Competition comprises two components: the Simulation Challenge and the Real-World Challenge. The
-                    Simulation Challenge will take place from late
-                    2025 to early 2026. The top 8 ranked participants in this phase will be
-                    invited to compete in the Real-World Challenge, which will
-                    be held on-site at ICRA. In the Simulation Challenge, we will open-source the
-                    benchmark environment in advance to allow participants to
-                    test tasks locally. Participants are required to submit their
-                    code and models via a cloud platform, where final testing and
-                    score announcement will also be conducted. For the Real-
-                    World Challenge, a dedicated venue will be set up at the
-                    ICRA site for on-site model testing.</p>
+                    Simulation Challenge will take place from late 2025 to early 2026. The top 8 ranked participants in
+                    this phase will be
+                    invited to compete in the Real-World Challenge.</p>
+                <h3>Task Description</h3>
+                <ul>
+                    <li><strong>Task Content:</strong> Garment folding,all garments used in the
+                        Challenge are of children's size.</li>
+                    <li><strong>Competition Platform:</strong> You need to submit your model online to use the cloud
+                        platform for
+                        unified evaluation of the simulation competition. The Real-World competition is held on-site at
+                        ICRA.
+                    </li>
+                    <li><strong>Mnipulation Method:</strong> Any approach including but not limited to end-to-end
+                        models, affordance-based methods, and sim2real techniques.</li>
+                    <li><strong>Model Input:</strong> Multi-view visual input from on-hand and off-hand cameras,
+                        including color and depth information. Custom visual input is supported but other sensors such
+                        as tactile are not yet supported.</li>
+                    <li><strong>Scoring Criteria:</strong> The scoring of the simulation competition is based on the
+                        accuracy of executing a certain number of tasks. The score in the RealWorld is determined by
+                        the accumulated score within a fixed time (divided into three difficulty levels, with scores
+                        increasing in sequence).
+                    </li>
+                </ul>
+
+                <h3>Simulation Challenge</h3>
+                <ul>
+                    <li><strong>Input Information:</strong> Tactile information only</li>
+                    <li><strong>Stage 1:</strong> Ranking based on evaluation results in simulation</li>
+                    <li><strong>Stage 2:</strong> Only teams advancing from Stage 1 participate, submitting their best
+                        checkpoint. The success rate will be evaluated based on real platform testing.</li>
+                    <li><strong>Scoring Criteria:</strong> Success rate of Task 1 * 50 + Success rate of Task 2 * 50
+                    </li>
+                </ul>
+                <h3>Real-World Challenge</h3>
+                <ul>
+                    <li><strong>Input Information:</strong> Tactile information only</li>
+                    <li><strong>Stage 1:</strong> Ranking based on evaluation results in simulation</li>
+                    <li><strong>Stage 2:</strong> Only teams advancing from Stage 1 participate, submitting their best
+                        checkpoint. The success rate will be evaluated based on real platform testing.</li>
+                    <li><strong>Scoring Criteria:</strong> Success rate of Task 1 * 50 + Success rate of Task 2 * 50
+                    </li>
+                </ul>
+                In the Simulation Challenge, we will open-source the
+                benchmark environment in advance to allow participants to
+                test tasks locally. Participants are required to submit their
+                code and models via a cloud platform, where final testing and
+                score announcement will also be conducted. For the Real-
+                World Challenge, a dedicated venue will be set up at the
+                ICRA site for on-site model testing.</p>
                 <p>
                     The task for this Challenge is garment folding. Participants are required to leverage models to
                     perceive the current state of the garment, perform flattening
@@ -217,7 +256,7 @@
                                 3D-scanned and converted into simulation assets.</div>
                         </div>
                         <div class="spacer" aria-hidden="true"></div>
-                  
+
 
                         <div class="figure-wrapper">
                             <figure class="figure-responsive">
@@ -268,7 +307,7 @@
                             The top 8 teams ranked by success rate will qualify for the
                             Real-World Challenge.
                         </p>
-                   
+
                     </div>
 
                     <div class="task-item">
@@ -278,7 +317,7 @@
                             may freely select the garments and initial states they wish to
                             operate on, with different garment-initial state combinations
                             assigned distinct score.</p>
-                 
+
                     </div>
                 </div>
             </div>
