@@ -208,19 +208,17 @@
                         <h4 class="task-title"><strong>Garment Category and Style</strong></h4>
                         <p class="mb-4 tm-intro-text">
                             Garments are children's size due to limited reach range, but are structurally comparable to
-                            adult garments for manipulation tasks. Some examples of fabrics are shown in Figure 2.</p>
+                            adult garments for manipulation tasks. </p>
                         <p class="mb-4 tm-intro-text">
                             <strong>Categories:</strong> Tops (2 styles:
                             long-sleeved,
                             short-sleeved) and Pants (2 styles:
-                            long, short).<br>
-                            <strong>Dataset selection:</strong> For each style, 4
-                            garments in the training set and 1 unseen garment added to
-                            the test set → Total 16 training and 20 testing garments.<br>
+                            long, short). Some examples are shown in Figure 2.<br>
+                            <strong>Difficulty levels:</strong>Three distinct initial states have been designed for
+                            various garments. Some examples of three levels are shown in Figure 3.<br>
                             <strong>Real-to-sim alignment:</strong> Real garments will
                             be 3D-scanned and converted into simulation assets.
                         </p>
-                        <div class="spacer" aria-hidden="true"></div>
                         <div class="spacer" aria-hidden="true"></div>
 
 
@@ -231,34 +229,7 @@
                                 <figcaption>Fig 2: Garment Category and Style.</figcaption>
                             </figure>
                         </div>
-                    </div>
-                    <div class="task-item">
-                        <h4 class="task-title"><strong>Task Difficulty Levels</strong></h4>
-                        <p class="mb-4 tm-intro-text">
-                            To fully test the capabilities of the models, we have designed three distinct initial
-                            states
-                            for various garments, corresponding to three difficulty levels
-                            (i.e., easy, middle, hard).</p>
-                        <p class="mb-4 tm-intro-text">
-                            <strong>Easy:</strong> The target garment starts in a fully
-                            flat
-                            initial
-                            state, with all its key points fully exposed.<br>
-                            <strong>Middle:</strong> The garment's initial state
-                            features
-                            slight fold
-                            ing, where some (but not all) key points are hidden.<br>
-                            <strong>Hard:</strong> The garment begins in a heavily
-                            folded
-                            initial state, making it
-                            potentially difficult to identify the garment's shape.
-                        </p>
                         <div class="spacer" aria-hidden="true"></div>
-                        <div class="spacer" aria-hidden="true"></div>
-                        <div class="spacer" aria-hidden="true"></div>
-                        <div class="spacer" aria-hidden="true"></div>
-                        <div class="spacer" aria-hidden="true"></div>
-
                         <div class="figure-wrapper">
                             <figure class="figure-responsive">
                                 <img src="img/level.png" alt="..." class="responsive-img" loading="lazy">
@@ -277,6 +248,13 @@
                             The top 8 teams ranked by success rate will qualify for the
                             Real-World Challenge. The Information of Garment are shown in Table 1.
                         </p>
+                        <p class="mb-4 tm-intro-text">
+                            A certain amount of data (for both simulation and real-world scenarios) will be collected
+                            for each of the three initial states of every garment,
+                            forming the official dataset. The specific composition of
+                            this dataset is detailed in Table I. Participants may choose
+                            to use this dataset according to their selected methods, or
+                            independently collect data to train their strategies.</p>
                         <p class="mb-4 tm-intro-text">
                             <strong>Prize:</strong> Each winner will receive Bi-Arm LeRobot.
                         </p>
