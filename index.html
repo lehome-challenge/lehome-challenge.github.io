@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="LeHome Challenge 2027: a two-stage simulation and real-world competition on recipe-driven kitchen manipulation of deformable objects, held alongside ICRA 2027 in Seoul, South Korea.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f3efe7">
+    <meta name="color-scheme" content="light">
+    <title>LeHome Challenge 2027: The 2nd Competition on Deformable Object Manipulation</title>
+    <link rel="icon" type="image/png" href="assets/2027/images/logo.png">
+    <link rel="preload" as="image" href="assets/2027/images/kitchen-scene.jpg">
+    <link rel="preload" as="font" type="font/ttf" href="assets/2027/fonts/Acme-Regular.ttf" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap">
+    <link rel="stylesheet" href="assets/2027/css/site.css">
+    <script defer src="assets/2027/js/site.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-brand" href="#home">
+                <img class="site-brand__logo" src="assets/2027/images/logo.png" alt="LeHome logo" width="40" height="40" decoding="async" loading="eager">
+                <span class="site-brand__name">LeHome</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary">
+                <a class="site-nav__link" href="#home" data-nav-link="home">Home</a>
+                <a class="site-nav__link" href="#overview" data-nav-link="overview">Overview</a>
+                <a class="site-nav__link" href="#format" data-nav-link="format">Rule</a>
+                <a class="site-nav__link" href="#schedule" data-nav-link="schedule">Schedule</a>
+                <a class="site-nav__link" href="#organizers" data-nav-link="organizers">Organizers</a>
+                <a class="site-nav__link" href="#contact" data-nav-link="contact">Contact</a>
+            </nav>
+
+            <div class="site-header__spacer" aria-hidden="true"></div>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <section class="page-hero" id="home" data-nav-section="home" aria-labelledby="page-title">
+            <div class="page-hero__backdrop" aria-hidden="true">
+                <div class="page-hero__slide is-active"
+                    style="background-image: url('assets/2027/images/kitchen-scene.jpg'); --hero-position: 50% 62%; --hero-mobile-position: 62% center;">
+                </div>
+            </div>
+            <div class="page-hero__overlay" aria-hidden="true"></div>
+            <div class="page-hero__inner">
+                <div class="hero-copy">
+                    <h1 id="page-title" class="hero-title">LeHome</h1>
+                    <p class="hero-edition">Challenge 2027</p>
+
+                    <p class="hero-subtitle">
+                        <span class="hero-subtitle__line">The 2nd Competition on</span>
+                        <span class="hero-subtitle__line">Deformable Object Manipulation</span>
+                        <span class="hero-subtitle__line">Skill Learning in Household Scenario</span>
+                    </p>
+
+                    <p class="hero-note">Registration opens December 1, 2026</p>
+
+                    <div class="hero-actions">
+                        <a class="paper-button paper-button--secondary" href="#contact">Contact Us</a>
+                        <a class="paper-button paper-button--secondary" href="2026/">2026 Challenge (Archived)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section page-section--deferred" id="overview" data-nav-section="overview"
+            aria-labelledby="overview-title">
+            <div class="section-frame">
+                <div class="section-heading">
+                    <h2 id="overview-title" class="section-title">Overview</h2>
+                </div>
+
+                <div class="section-intro prose">
+                    <p>
+                        Deformable object manipulation remains one of robotics' toughest open problems, essential for
+                        robots to work in real households. LeHome Challenge 2027 focuses this problem on
+                        cooking-style kitchen tasks, from handling utensils to manipulating soft food ingredients.
+                        The competition is simulation-driven: teams first develop and validate their solutions in
+                        simulation, then deploy the best-performing methods on real robots.
+                    </p>
+                </div>
+
+                <figure class="glass-panel overview-card">
+                    <img class="overview-card__image" src="assets/2027/images/kitchen-scene.jpg"
+                        alt="Illustrative kitchen environment rendered in simulation" loading="lazy"
+                        decoding="async" width="1545" height="744">
+                    <figcaption class="overview-card__caption">
+                        Kitchen environment rendered in simulation.
+                    </figcaption>
+                </figure>
+
+                <article class="highlights-stack">
+                    <details class="highlight-item glass-panel" open>
+                        <summary class="highlight-summary">
+                            <span class="highlight-summary__index">01</span>
+                            <span class="highlight-summary__title">Sim-Ready Kitchen Environments &amp; Assets</span>
+                        </summary>
+                        <div class="highlight-detail">
+                            Standardized simulated kitchen scenes with a fixed set of
+                            manipulable assets, for recipe-driven hamburger and sandwich tasks with controlled
+                            variation.
+                        </div>
+                    </details>
+
+                    <details class="highlight-item glass-panel">
+                        <summary class="highlight-summary">
+                            <span class="highlight-summary__index">02</span>
+                            <span class="highlight-summary__title">Diverse Manipulation Strategies</span>
+                        </summary>
+                        <div class="highlight-detail">
+                            Open to modular perception-planning-control pipelines and end-to-end policies alike,
+                            including <strong>imitation learning</strong>, <strong>reinforcement learning</strong>,
+                            <strong>VLA</strong>, and <strong>World Action Models</strong>.
+                        </div>
+                    </details>
+
+                    <details class="highlight-item glass-panel">
+                        <summary class="highlight-summary">
+                            <span class="highlight-summary__index">03</span>
+                            <span class="highlight-summary__title">Evaluation in Both Simulation and the Real World</span>
+                        </summary>
+                        <div class="highlight-detail">
+                            A two-stage pipeline: an online <strong>Simulation Challenge</strong> qualifying round,
+                            then a <strong>Real-World Challenge</strong> on a common robotic platform for top teams.
+                        </div>
+                    </details>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="page-section page-section--deferred" id="format" data-nav-section="format"
+            aria-labelledby="format-title">
+            <div class="section-frame">
+                <div class="section-heading">
+                    <h2 id="format-title" class="section-title">Rule</h2>
+                </div>
+
+                <div class="section-intro prose">
+                    <p>
+                        A two-stage pipeline: all teams enter the online Simulation Challenge, and the six
+                        highest-ranked teams advance to the on-site Real-World Challenge.
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="section-block__title">Standardized Environment &amp; Asset</h3>
+                    <div class="prose">
+                        <p>
+                            The Simulation Challenge runs on a common robot-sensor setup shared by all
+                            finalist teams. The Real-World Challenge uses safe plastic and silicone replicas matching
+                            the geometry and physics of their simulation counterparts.
+                        </p>
+                    </div>
+
+                    <figure class="glass-panel overview-card">
+                        <img class="overview-card__image" src="assets/2027/images/food-assets.jpg"
+                            alt="Illustrative simulation assets for food ingredients, containers, and kitchen tools"
+                            loading="lazy" decoding="async" width="1262" height="594">
+                        <figcaption class="overview-card__caption">
+                            Simulation assets for food ingredients, containers, and kitchen tools.
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="section-block__title">Benchmark Variation</h3>
+                    <div class="variation-grid">
+                        <div class="variation-item glass-panel">
+                            <h4 class="variation-item__title">Positional</h4>
+                            <p class="variation-item__body">Ingredient positions and orientations vary within the
+                                reachable workspace.</p>
+                        </div>
+                        <div class="variation-item glass-panel">
+                            <h4 class="variation-item__title">Visual</h4>
+                            <p class="variation-item__body">Lighting, tabletop and backdrop appearance, and
+                                non-interactive background objects vary while the robot–camera geometry stays fixed.
+                            </p>
+                        </div>
+                        <div class="variation-item glass-panel">
+                            <h4 class="variation-item__title">Recipe</h4>
+                            <p class="variation-item__body">Ingredient combinations and target layer orders vary
+                                across hamburger and sandwich recipes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="section-block__title">Scoring</h3>
+                    <div class="prose">
+                        <p>
+                            Each recipe scores one point per consecutively correct layer from the bottom bun — a
+                            mistake at layer <em>k</em>+1 caps the score at <em>k</em>. Rankings go by total score,
+                            then completed tasks, then execution time as a tiebreaker.
+                        </p>
+                    </div>
+
+                    <figure class="glass-panel overview-card">
+                        <img class="overview-card__image" src="assets/2027/images/burger-assembly.jpg"
+                            alt="Recipe-conditioned hamburger assembly task" loading="lazy" decoding="async"
+                            width="1262" height="902">
+                        <figcaption class="overview-card__caption">
+                            Recipe-conditioned hamburger assembly task.
+                        </figcaption>
+                    </figure>
+
+                    <div class="glass-panel recipe-table-wrap">
+                        <table class="recipe-table">
+                            <caption>
+                                These familiar product names are illustrative examples only — their compositions are
+                                simplified into discrete benchmark layers, listed in scored bottom-to-top order.
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Burger</th>
+                                    <th scope="col">Composition (bottom → top)</th>
+                                    <th scope="col">Max Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Big Mac</td>
+                                    <td>Bottom Bun → Vegetable Layer → Cheese → Beef Patty → Middle Bun → Vegetable
+                                        Layer → Beef Patty → Top Bun</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>Double Cheeseburger</td>
+                                    <td>Bottom Bun → Beef Patty → Cheese → Beef Patty → Cheese → Vegetable Layer →
+                                        Top Bun</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Quarter Pounder with Cheese</td>
+                                    <td>Bottom Bun → Cheese → Beef Patty → Cheese → Vegetable Layer → Top Bun</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Cheeseburger</td>
+                                    <td>Bottom Bun → Beef Patty → Cheese → Vegetable Layer → Top Bun</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>KFC Classic Chicken Sandwich</td>
+                                    <td>Bottom Bun → Chicken Patty → Vegetable Layer → Top Bun</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="section-block">
+                    <h3 class="section-block__title">Prize</h3>
+                    <div class="prize-grid">
+                        <div class="prize-card glass-panel">
+                            <h4 class="prize-card__title">Simulation Challenge Award</h4>
+                            <ul class="prize-list">
+                                <li class="prize-row">
+                                    <span class="prize-row__place">1st &amp; 2nd place</span>
+                                    <span class="prize-row__amount">TBD</span>
+                                </li>
+                                <li class="prize-row">
+                                    <span class="prize-row__place">3rd &amp; 4th place</span>
+                                    <span class="prize-row__amount">TBD</span>
+                                </li>
+                                <li class="prize-row">
+                                    <span class="prize-row__place">5th &amp; 6th place</span>
+                                    <span class="prize-row__amount">TBD</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="prize-card glass-panel">
+                            <h4 class="prize-card__title">Real-World Challenge Award</h4>
+                            <ul class="prize-list">
+                                <li class="prize-row">
+                                    <span class="prize-row__place">1st place</span>
+                                    <span class="prize-row__amount">TBD</span>
+                                </li>
+                                <li class="prize-row">
+                                    <span class="prize-row__place">2nd place</span>
+                                    <span class="prize-row__amount">TBD</span>
+                                </li>
+                                <li class="prize-row">
+                                    <span class="prize-row__place">3rd place</span>
+                                    <span class="prize-row__amount">TBD</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section page-section--deferred" id="schedule" data-nav-section="schedule"
+            aria-labelledby="schedule-title">
+            <div class="section-frame">
+                <div class="section-heading">
+                    <h2 id="schedule-title" class="section-title">Schedule</h2>
+                </div>
+
+                <div class="section-intro prose">
+                    <p>
+                        The Simulation Challenge runs from December 2026 to April 2027. The Real-World Challenge is
+                        planned for May 25–27, 2027, during ICRA 2027 in Seoul, South Korea.
+                    </p>
+                </div>
+
+                <div class="schedule-grid">
+                    <div class="schedule-card glass-panel">
+                        <h3 class="schedule-card__title">Simulation Challenge</h3>
+                        <ul class="schedule-list">
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">From Dec 1, 2026</span>
+                                <p class="schedule-row__desc">Registration opens.</p>
+                            </li>
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">Jan 1, 2027</span>
+                                <p class="schedule-row__desc">Online briefing.</p>
+                            </li>
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">Jan 3, 2027</span>
+                                <p class="schedule-row__desc">Benchmark released; competition begins.</p>
+                            </li>
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">Jan 3 – Apr 15, 2027</span>
+                                <p class="schedule-row__desc">Code submission and evaluation.</p>
+                            </li>
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">Apr 16–20, 2027</span>
+                                <p class="schedule-row__desc">Final results announced.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="schedule-card glass-panel">
+                        <h3 class="schedule-card__title">Real-World Challenge</h3>
+                        <ul class="schedule-list">
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">Apr 23, 2027</span>
+                                <p class="schedule-row__desc">Online meeting with finalists.</p>
+                            </li>
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">Late Apr / Early May 2027</span>
+                                <p class="schedule-row__desc">Platform specs and rubric released.</p>
+                            </li>
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">May 25, 2027</span>
+                                <p class="schedule-row__desc">On-site setup and practice.</p>
+                            </li>
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">May 26, 2027</span>
+                                <p class="schedule-row__desc">Team demonstrations and evaluation.</p>
+                            </li>
+                            <li class="schedule-row">
+                                <span class="schedule-row__date">May 27, 2027</span>
+                                <p class="schedule-row__desc">Awards ceremony.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section page-section--deferred" id="organizers" data-nav-section="organizers"
+            aria-labelledby="organizers-title">
+            <div class="section-frame">
+                <div class="section-heading">
+                    <h2 id="organizers-title" class="section-title">Organizers</h2>
+                </div>
+
+                <div class="organizers-grid">
+                    <a class="organizer-card" href="https://warshallrho.github.io/" target="_blank" rel="noopener noreferrer">
+                        <img class="organizer-avatar" src="assets/2027/images/ruihai.png" alt="" loading="lazy" width="174" height="152" decoding="async">
+                        <h3 class="organizer-name">Ruihai Wu</h3>
+                        <p class="organizer-affiliation">UC Berkeley</p>
+                    </a>
+
+                    <a class="organizer-card" href="https://1izeyi.github.io/" target="_blank" rel="noopener noreferrer">
+                        <img class="organizer-avatar" src="assets/2027/images/zeyi.webp" alt="" loading="lazy" width="148" height="148" decoding="async">
+                        <h3 class="organizer-name">Zeyi Li</h3>
+                        <p class="organizer-affiliation">NUS</p>
+                    </a>
+
+                    <a class="organizer-card" href="mailto:hangtingliu9@gmail.com">
+                        <img class="organizer-avatar" src="assets/2027/images/hangting.webp" alt="" loading="lazy" width="1279" height="1314" decoding="async">
+                        <h3 class="organizer-name">Hangting Liu</h3>
+                        <p class="organizer-affiliation">Lightwheel</p>
+                    </a>
+
+                    <a class="organizer-card" href="https://albilo17.github.io/" target="_blank" rel="noopener noreferrer">
+                        <img class="organizer-avatar" src="assets/2027/images/albi.png" alt="" loading="lazy" width="1024" height="644" decoding="async">
+                        <h3 class="organizer-name">Alberta Longhini</h3>
+                        <p class="organizer-affiliation">Stanford University</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section page-section--deferred" id="contact" data-nav-section="contact"
+            aria-labelledby="contact-title">
+            <div class="section-frame section-frame--narrow">
+                <div class="section-heading">
+                    <h2 id="contact-title" class="section-title">Contact</h2>
+                </div>
+
+                <div class="prose section-intro">
+                    <p>Feel free to reach out — we're here to help.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <article class="contact-card glass-panel">
+                        <img class="contact-avatar" src="assets/2027/images/discord.png" alt="Discord" loading="lazy" width="225" height="225" decoding="async">
+                        <h3 class="contact-card__title">Discord (Recommended)</h3>
+                        <p class="contact-card__link">
+                            <a href="https://discord.com/invite/4pDAkBP94h" target="_blank"
+                                rel="noopener noreferrer">Join the server</a>
+                        </p>
+                    </article>
+
+                    <article class="contact-card glass-panel">
+                        <img class="contact-avatar" src="assets/2027/images/outlook_logo.png" alt="Email" loading="lazy" width="3840" height="2160" decoding="async">
+                        <h3 class="contact-card__title">Email</h3>
+                        <p class="contact-card__link">
+                            <a href="mailto:lehome-challenge@outlook.com">lehome-challenge@outlook.com</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <div class="page-footer__inner glass-panel">
+                <p>LeHome Challenge 2027 · ICRA 2027, Seoul, South Korea</p>
+                <p>Looking for the previous edition? <a href="2026/">Visit the LeHome Challenge 2026 site</a>.</p>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>
